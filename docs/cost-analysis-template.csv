@@ -1,0 +1,5 @@
+Technique,Metric,Before,After,Unit,How measured
+Right-size CPU/memory requests,CPU request per pod,record baseline,100,millicores,kubectl get deployment / describe
+Right-size CPU/memory requests,Memory request per pod,record baseline,96,MiB,kubectl get deployment / describe
+HPA vs fixed replicas,Replicas at idle,record baseline,2,pods,kubectl get deployment / kubectl get hpa
+Lean runtime image,Image size,record baseline,record optimized,MB,docker image ls visitor-counter

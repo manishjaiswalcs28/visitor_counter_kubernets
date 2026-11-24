@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+<rect width="1200" height="720" fill="#f3f0e8"/><text x="60" y="70" font-family="Arial" font-size="28" font-weight="bold" fill="#18221f">LOOP / VISITOR COUNTER — DEPLOYMENT ARCHITECTURE</text>
+<rect x="60" y="120" width="1080" height="130" rx="18" fill="#d5f36a" stroke="#18221f" stroke-width="2"/>
+<text x="90" y="160" font-family="Arial" font-size="22" font-weight="bold">User / Browser</text><text x="90" y="200" font-family="Arial" font-size="16">HTTP request → visitor page → visitor count</text>
+<path d="M600 250 V300 M600 300 H320 V350 M600 300 H880 V350" stroke="#18221f" stroke-width="3" fill="none"/><path d="M312 340 L320 350 L328 340 M872 340 L880 350 L888 340" stroke="#18221f" stroke-width="3" fill="none"/>
+<rect x="70" y="350" width="500" height="300" rx="16" fill="#fff" stroke="#18221f" stroke-width="2"/><text x="100" y="390" font-family="Arial" font-size="22" font-weight="bold">Primary / local Minikube</text>
+<rect x="110" y="430" width="190" height="80" rx="10" fill="#e6eee5" stroke="#53665a"/><text x="135" y="475" font-family="Arial" font-size="18">Flask Pods × 2–8</text>
+<rect x="340" y="430" width="180" height="80" rx="10" fill="#e6eee5" stroke="#53665a"/><text x="390" y="475" font-family="Arial" font-size="18">Redis</text>
+<path d="M300 470 H340" stroke="#18221f" stroke-width="2"/><text x="110" y="560" font-family="Arial" font-size="15">Service + HPA + probes + self-healing</text><text x="110" y="590" font-family="Arial" font-size="15">Metrics Server supplies CPU metrics</text>
+<rect x="630" y="350" width="500" height="300" rx="16" fill="#fff" stroke="#18221f" stroke-width="2"/><text x="660" y="390" font-family="Arial" font-size="22" font-weight="bold">Secondary / local Minikube</text>
+<rect x="670" y="430" width="190" height="80" rx="10" fill="#e6eee5" stroke="#53665a"/><text x="695" y="475" font-family="Arial" font-size="18">Flask Pods × 2–8</text>
+<rect x="900" y="430" width="180" height="80" rx="10" fill="#e6eee5" stroke="#53665a"/><text x="950" y="475" font-family="Arial" font-size="18">Redis</text>
+<path d="M860 470 H900" stroke="#18221f" stroke-width="2"/><text x="670" y="560" font-family="Arial" font-size="15">Standby deployment, independently healthy</text><text x="670" y="590" font-family="Arial" font-size="15">Manual endpoint/context switch simulates failover</text>
+<text x="60" y="690" font-family="Arial" font-size="13" fill="#65736b">Note: both environments run on one laptop; this is a hybrid-cloud failover simulation, not two real clouds.</text>
+</svg>
